@@ -52,13 +52,14 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     if (platform === "ios") {
         //AppStoreGO();
         //window.location.href = `linktomyasus://${recid}`;
-	window.location.href = "linktomyasus://";
+	
         setTimeout(function(){
 
             window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
             window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 
         },2000)
+	window.location.href = "linktomyasus://";
 		
     } else if (platform === 'android') {
         //AndroidStoreGO();
