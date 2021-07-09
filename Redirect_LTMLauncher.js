@@ -52,7 +52,8 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     if (platform === "ios") {
         //AppStoreGO();
         //window.location.href = `linktomyasus://${recid}`;
-	if(window.location.href = "linktomyasus://" == undefined){
+	var rec = location.assign("linktomyasus://")
+	if(rec == undefined){
 	   window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;	
 	}else{
 	   window.location.href = "linktomyasus://";
