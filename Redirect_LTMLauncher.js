@@ -7,7 +7,7 @@ function platform_rec() {
     console.log(navigator.vendor);
     console.log(navigator.platform);
     
-    if (Platform_useragent.match(/iPad|iPhone|iPod/i/android/i)) {
+    if (Platform_useragent.match(/iPad|iPhone|iPod/i)) {
         console.log('ios')
         return "ios";
     }else if (Platform_useragent.match(/android/i)) {
