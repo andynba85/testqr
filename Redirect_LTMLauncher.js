@@ -18,7 +18,25 @@ function platform_rec() {
     }
     
 }
-
+function isEffective(url) {
+   try {
+     var xmlhttp;
+     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+       xmlhttp = new XMLHttpRequest();
+     } else { // code for IE6, IE5
+       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+     }
+     xmlhttp.open("get", url, false);
+     xmlhttp.send();
+     if (xmlhttp.status == "404") {
+       return false;
+     } else {
+       return true;
+     }
+   } catch (e) {
+     return false;
+   }
+ }
 // navigate app
 function navigateLTM(androidStoreId,appStoreId,recid) {
 
@@ -50,18 +68,11 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     */
 
     if (platform === "ios") {
-        //AppStoreGO();
-	var xmlhttp = new ActiveXObject( "Microsoft.XMLHTTP");
-	xmlhttp.open("GET",'linktomyasus://',false);
-	xmlhttp.send();
-	if(xmlhttp.readyState==4){
-	   if(xmlhttp.Status != 200){
-	      window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-	   }
-	   else{
-	      window.location.href = "linktomyasus://";
-	   }
-	
+        //AppStoreGO()
+	if(isEffective("linktomyasus://")){
+		window.location.href = "linktomyasus://";	
+	}else{
+		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
 	}
         //location.href = `linktomyasus://${recid}`;
 	//var rec = location.assign("linktomyasus://")
