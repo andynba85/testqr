@@ -69,10 +69,10 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 
     if (platform === "ios") {
         //AppStoreGO()
-	if(isEffective("linktomyasus://")){
-		window.location.href = "linktomyasus://";	
+	if(window.open("linktomyasus://") == null){
+		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;	
 	}else{
-		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
+		window.location.href = "linktomyasus://";
 	}
         //location.href = `linktomyasus://${recid}`;
 	//var rec = location.assign("linktomyasus://")
