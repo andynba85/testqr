@@ -72,7 +72,7 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	//var ifr = document.createElement('iframe');
 	//ifr.src = 'com.baidu.tieba://';
 	//ifr.style.display = 'none';
-	//document.body.appendChild(ifr);
+	//setTimeout(function(){ document.body.appendChild(ifr); },96);
         //location.href = `linktomyasus://${recid}`;
 	//var rec = location.assign("linktomyasus://")
 	//if(rec == undefined){
@@ -80,14 +80,14 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	//}else{
 	//  window.location.href = "linktomyasus://";
 	//}
-	window.location.href = "linktomyasus://x-callback-url/parse?x-error={{itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}}}";
-	    
-        //setTimeout(function(){
+	//window.location.href = "linktomyasus://x-callback-url/parse?x-error={{itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}}}";
+	window.location.href = "linktomyasus://";
+        setTimeout(function(){
 
-        //    window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-        //    window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
+            window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
+            window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 
-        //},2000)
+        },1000)
 	//window.location.href = "linktomyasus://";
 		
     } else if (platform === 'android') {
