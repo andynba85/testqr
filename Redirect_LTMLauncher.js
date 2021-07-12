@@ -69,11 +69,10 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 
     if (platform === "ios") {
         //AppStoreGO()
-	if(window.open("linktomyasus://") == null){
-		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;	
-	}else{
-		window.location.href = "linktomyasus://";
-	}
+	//var ifr = document.createElement('iframe');
+	//ifr.src = 'com.baidu.tieba://';
+	//ifr.style.display = 'none';
+	//document.body.appendChild(ifr);
         //location.href = `linktomyasus://${recid}`;
 	//var rec = location.assign("linktomyasus://")
 	//if(rec == undefined){
@@ -81,7 +80,7 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	//}else{
 	//  window.location.href = "linktomyasus://";
 	//}
-	//window.location.href = "linktomyasus://";
+	window.location.href = "linktomyasus://&x-error={{itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}}}";
 	    
         //setTimeout(function(){
 
