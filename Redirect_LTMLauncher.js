@@ -80,7 +80,7 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	//}else{
 	//  window.location.href = "linktomyasus://";
 	//}
-	window.location.href = "linktomyasus://&x-error={{itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}}}";
+	window.location.href = "linktomyasus://x-callback-url/parse?x-error={{itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}}}";
 	    
         //setTimeout(function(){
 
