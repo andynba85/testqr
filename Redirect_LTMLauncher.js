@@ -87,7 +87,7 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
             window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
             window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 
-        },1000)
+        },500)
 	//window.location.href = "linktomyasus://";
 		
     } else if (platform === 'android') {
