@@ -33,6 +33,8 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	window.addEventListener('visibilitychange', () => {
 		if(document.visibilityState === 'hidden'){
 			alert('页面已被切换至后台');
+		}else{
+			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
 		};
 	})
 		
