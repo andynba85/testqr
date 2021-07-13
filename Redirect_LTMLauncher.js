@@ -53,34 +53,34 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     if (platform === "ios") {
         //AppStoreGO();
         //window.location.href = `linktomyasus://${recid}`;
-		let timer,start = new Date().getTime();
+		//let timer,start = new Date().getTime();
 		window.location.href = "linktomyasus://";
-		window.addEventListener('visibilitychange', () => {
-			if(document.visibilityState === 'hidden'){
-				alert('页面已被切换至后台');
-			};
-		})
+		//window.addEventListener('visibilitychange', () => {
+		//	if(document.visibilityState === 'hidden'){
+		//		alert('页面已被切换至后台');
+		//	};
+		//})
 		
-		setTimeout(function(){
-			let end = new Date().getTime();
-            if(end - start > timeOut + 1000){
-                clearTimeout(timer);
-            }else {
-                window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-            };
+		//setTimeout(function(){
+		//	let end = new Date().getTime();
+        //    if(end - start > timeOut + 1000){
+        //        clearTimeout(timer);
+        //    }else {
+        //        window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
+        //    };
 
 			
 			//window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 
-		},2000)
-
-
-		//setTimeout(function(){
-
-			//window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-			//window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
-
 		//},2000)
+
+
+		setTimeout(function(){
+
+			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
+			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
+
+		},2000)
          
 
 		
