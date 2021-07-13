@@ -53,31 +53,15 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     if (platform === "ios") {
         //AppStoreGO();
         //window.location.href = `linktomyasus://${recid}`;
-		let timer,start = new Date().getTime();
+		
 		window.location.href = "linktomyasus://"
-		window.addEventListener('visibilitychange', () => {
-			if(document.visibilityState === 'hidden'){
-				clearTimeout(timer);
-				alert('页面已被切换至后台');
-			}
-			else{
-				
-				alert('沒切喔');
-			};
-		})
-		timer = setTimeout(()=>{
-            let end = new Date().getTime();
-            if(end - start > timeOut + 1000){
-                clearTimeout(timer);
-            }else {
-				setTimeout(function(){
+		setTimeout(function(){
 
-					window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-					window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
+			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
+			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 
-				},1000)
-            };
-        },timeOut);
+		},1000)
+         
 
 		
 		//時間改小一點500搞不好可以解決
