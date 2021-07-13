@@ -7,7 +7,7 @@ function platform_rec() {
     console.log(navigator.vendor);
     console.log(navigator.platform);
     
-    if (Platform_useragent.match(/iPad|iPhone|iPod/i)) {
+    if (Platform_useragent.match(/iPad|iPhone|iPod/i/android/i)) {
         console.log('ios')
         return "ios";
     }else if (Platform_useragent.match(/android/i)) {
@@ -18,25 +18,8 @@ function platform_rec() {
     }
     
 }
-function isEffective(url) {
-   try {
-     var xmlhttp;
-     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-       xmlhttp = new XMLHttpRequest();
-     } else { // code for IE6, IE5
-       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-     }
-     xmlhttp.open("get", url, false);
-     xmlhttp.send();
-     if (xmlhttp.status == "404") {
-       return false;
-     } else {
-       return true;
-     }
-   } catch (e) {
-     return false;
-   }
- }
+
+
 // navigate app
 function navigateLTM(androidStoreId,appStoreId,recid) {
 
@@ -68,27 +51,26 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     */
 
     if (platform === "ios") {
-        //AppStoreGO()
-	//var ifr = document.createElement('iframe');
-	//ifr.src = 'com.baidu.tieba://';
-	//ifr.style.display = 'none';
-	//setTimeout(function(){ document.body.appendChild(ifr); },96);
-        //location.href = `linktomyasus://${recid}`;
-	//var rec = location.assign("linktomyasus://")
-	//if(rec == undefined){
-	//   window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;	
-	//}else{
-	//  window.location.href = "linktomyasus://";
-	//}
-	//window.location.href = "linktomyasus://x-callback-url/parse?x-error={{itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}}}";
-	window.location.href = "linktomyasus://";
+        //AppStoreGO();
+        //window.location.href = `linktomyasus://${recid}`;
+
+		window.location.href = "linktomyasus://"
+		window.addEventListener('visibilitychange', () => {
+			if(document.visibilityState === 'hidden'){
+				alert('页面已被切换至后台');
+			}
+			else{
+				alert('沒切喔');
+			};
+		})
+		
         setTimeout(function(){
 
             window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
             window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 
-        },500)
-	//window.location.href = "linktomyasus://";
+        },2000)
+		//時間改小一點500搞不好可以解決
 		
     } else if (platform === 'android') {
         //AndroidStoreGO();
