@@ -24,67 +24,36 @@ function platform_rec() {
 function navigateLTM(androidStoreId,appStoreId,recid) {
 
     const platform = platform_rec();
-    /*
-    function AppStoreGO() {
-
-        window.location.href = "linktomyasus://";
-        setTimeout(function(){
-
-            window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-            window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
-
-        },2000)
-    }
-
-    function AndroidStoreGO() {
-
-        window.location.href = "linktomyasus://";
-        //在使用「URL Scheme」跳轉的同時，通過定時器在一定時間之後跳轉到下載頁。倘若裝置上有安裝APP，就會跳到APP，否則在一定時間後就會跳到下載頁。
-        setTimeout(function(){
-
-            window.location.href = `https://play.google.com/store/apps/details?id=${androidStoreId}`;
-            window.location.href = `https://play.google.com/store/apps/details?id=${androidStoreId}`;
-
-        },2000)
     
-    }
-    */
-
     if (platform === "ios") {
         //AppStoreGO();
         //window.location.href = `linktomyasus://${recid}`;
-		//let timer,start = new Date().getTime();
-		window.location.href = "linktomyasus://";
-		//window.addEventListener('visibilitychange', () => {
-		//	if(document.visibilityState === 'hidden'){
-		//		alert('页面已被切换至后台');
-		//	};
-		//})
+	let timer,start = new Date().getTime();
+	window.location.href = "linktomyasus://";
+	window.addEventListener('visibilitychange', () => {
+		if(document.visibilityState === 'hidden'){
+			alert('页面已被切换至后台');
+		};
+	})
 		
-		//setTimeout(function(){
-		//	let end = new Date().getTime();
-        //    if(end - start > timeOut + 1000){
-        //        clearTimeout(timer);
-        //    }else {
-        //        window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-        //    };
-
-			
-			//window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
-
-		//},2000)
+	setTimeout(function(){
+		let end = new Date().getTime();
+        	if(end - start > timeOut + 1000){
+        		clearTimeout(timer);
+        	}else {
+        		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
+        	};
+	},2000)
 
 
-		setTimeout(function(){
-
-			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
-
-		},2000)
+	//setTimeout(function(){
+	//	window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
+	//	window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
+	//},2000)
          
 
 		
-		//時間改小一點500搞不好可以解決
+	//時間改小一點500搞不好可以解決
 		
     } else if (platform === 'android') {
         //AndroidStoreGO();
