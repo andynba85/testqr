@@ -54,13 +54,13 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
         //AppStoreGO();
         //window.location.href = `linktomyasus://${recid}`;
 		
-		window.location.href = "linktomyasus://"
+		window.location.href = "linktomyasus://";
 		setTimeout(function(){
 
 			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
 			window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 
-		},1000)
+		},2000)
          
 
 		
