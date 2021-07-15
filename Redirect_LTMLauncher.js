@@ -47,7 +47,7 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
         //	};
 	//},2000)
 	//window.location.href = "linktomyasus://";
-	window.location.href = "https://apps.apple.com/app/link-to-myasus/id${appStoreId}?ls=1&mt=8";
+	window.location.href = "https://apps.apple.com/en/app/link-to-myasus/id${appStoreId}?ls=1&mt=8";
 	//setTimeout(function(){
 	//	window.location.href = `https://apps.apple.com/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`;
 	//	window.location.href = `https://apps.apple.com/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`; 
