@@ -47,19 +47,18 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
         //	};
 	//},2000)
 
-	window.location.href = "linktomyasus://";
 	setTimeout(function(){
 		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
 		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 	},2000)
-         
+	window.location.href = "linktomyasus://";         
 
 		
 	//時間改小一點500搞不好可以解決
 		
     } else if (platform === 'android') {
-        //AndroidStoreGO();
-        window.location.href = "linktomyasus://";
+        //AndroidStoreGO()
+	window.location.href = "linktomyasus://";
         //window.location.href = `linktomyasus://${recid}`;
         //在使用「URL Scheme」跳轉的同時，通過定時器在一定時間之後跳轉到下載頁。倘若裝置上有安裝APP，就會跳到APP，否則在一定時間後就會跳到下載頁。
         setTimeout(function(){
