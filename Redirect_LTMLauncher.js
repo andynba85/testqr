@@ -51,7 +51,7 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
 		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`; 
 	},2000)
-	window.location.href = "linktomyasus://";         
+	window.location.replace('linktomyasus://');         
 
 		
 	//時間改小一點500搞不好可以解決
