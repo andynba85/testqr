@@ -48,8 +48,8 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	//},2000)
 	window.location.href = "linktomyasus://";
 	setTimeout(function(){
-		window.location.href = `https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`;
-		window.location.href = `https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`; 
+		window.location.href = `https://apps.apple.com/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`;
+		window.location.href = `https://apps.apple.com/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`; 
 	},2000)
 	//window.location.replace('https://apps.apple.com/us/app/link-to-myasus/id1481035824?ls=1&mt=8');         
 
