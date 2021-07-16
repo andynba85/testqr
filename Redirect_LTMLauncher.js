@@ -26,69 +26,14 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     const platform = platform_rec();
     
     if (platform === "ios") {
-        //AppStoreGO();
-        //window.location.href = `linktomyasus://${recid}`;
-	//let timer,start = new Date().getTime();
-	//window.location.href = "linktomyasus://";
-	//window.addEventListener('visibilitychange', () => {
-	//	if(document.visibilityState === 'hidden'){
-	//		alert('页面已被切换至后台');
-	//	}else{
-	//		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-	//	};
-	//})
-		
-	//setTimeout(function(){
-	//	let end = new Date().getTime();
-        //	if(end - start > timeOut + 1000){
-        //		clearTimeout(timer);
-        //	}else {
-        //		window.location.href = `itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`;
-        //	};
-	//},2000)
-	//window.location.reload(true);
-	location.assign("linktomyasus://");
-	//alert(location.assign("linktomyasus://"));
-	//if(!window.location.assign("linktomyasus://")){
-	const timer = setTimeout(function(){
-		//window.location.replace(`itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`);
-		location.assign("https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8");
-	        //window.location.href = `https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`;
-		//window.location.replace(`https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`); 
-	},2500);
-	 
-	 /*
-	 const visibilitychange = function() {
-		alert('1');
-  	 	const tag = document.hidden || document.webkitHidden;
-  		tag && ;
-	 };
-
-	document.addEventListener("visibilitychange", visibilitychange, false);
-	document.addEventListener("webkitvisibilitychange", visibilitychange, false);
-	*/ 
-	document.addEventListener("visibilitychange", function() {
-  		if (document.visibilityState === 'hidden') {
-			alert('1');
-    			clearTimeout(timer);
-  		} else {
-			alert('2');
-			clearTimeout(timer);
-  		}
-		//alert(document.visibilityState);
+        
+	const myurl = new URL("linktomyasus://");
+	fecth(myurl).then(function(response){
+		alert(response);
+		return respoonse.text;
+	}).then(function(text){
+		console.log(text);	
 	});
-	    
-	document.addEventListener("webkitvisibilitychange", function() {
-  		if (document.visibilityState === 'hidden') {
-			alert('3');
-    			clearTimeout(timer);
-  		} else {
-			alert('4');
-			clearTimeout(timer);
-  		}
-		//alert(document.visibilityState);
-	});
-	//}
 	//window.location.assign("linktomyasus://");
 	//window.location.reload(true);
 	//window.open("linktomyasus://",'_blank');
