@@ -55,17 +55,25 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	     window.location.href = `https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`;
 		//window.location.replace(`https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`); 
 	},2000);
-	    
+	 
+	 /*
 	 const visibilitychange = function() {
 		alert('1');
   	 	const tag = document.hidden || document.webkitHidden;
-  		tag && clearTimeout(timer);
+  		tag && ;
 	 };
 
 	document.addEventListener("visibilitychange", visibilitychange, false);
 	document.addEventListener("webkitvisibilitychange", visibilitychange, false);
-	    
-	
+	*/ 
+	document.addEventListener("visibilitychange", function() {
+  		if (document.visibilityState === document.hidden) {
+			alert('1');
+    			clearTimeout(timer);
+  		} else {
+			alert('2');
+  		}
+	});
 	//}
 	//window.location.assign("linktomyasus://");
 	//window.location.reload(true);
