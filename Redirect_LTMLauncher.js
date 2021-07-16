@@ -28,13 +28,10 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     if (platform === "ios") {
         
 	//const myurl = new URL("linktomyasus://");
-	fecth("https://apps.apple.com/us/app/link-to-myasus/id1481035824?ls=1&mt=8").then(function(response){
-		alert(response);
-		//return respoonse.text;
-	}).then(function(text){
-		alert(text);
-		console.log(text);	
-	});
+	window.location = "linktomyasus://";
+	setTimeout(function(){
+            window.location = `https://apps.apple.com/us/app/link-to-myasus/id1481035824?ls=1&mt=8`;
+        },2000)
 	//window.location.assign("linktomyasus://");
 	//window.location.reload(true);
 	//window.open("linktomyasus://",'_blank');
