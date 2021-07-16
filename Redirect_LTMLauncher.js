@@ -50,19 +50,23 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	location.assign("linktomyasus://");
 	//alert(location.assign("linktomyasus://"));
 	//if(!window.location.assign("linktomyasus://")){
-		setTimeout(function(){
+	const timer = setTimeout(function(){
 		//window.location.replace(`itms-apps://apps.apple.com/us/app/link-to-myasus/id${appStoreId}`);
-		window.location.href = `https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`;
+	     window.location.href = `https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`;
 		//window.location.replace(`https://apps.apple.com/us/app/link-to-myasus/id${appStoreId}?ls=1&mt=8`); 
-		},2000);
+	},2000);
 	    
-	const visibilitychange = function() {
-	  const tag = document.hidden || document.webkitHidden;
-	  tag && clearTimeout(timer);
-	};
+	document.addEventListener("visibilitychange", function() {
+  		if (document.visibilityState === 'visible') {
+    			alert(1);
+			clearTimeout(timer);
+  		} else {
+			alert(2);
+    			//backgroundMusic.pause();
+  		}
+	});
 	    
-	document.addEventListener("visibilitychange", visibilitychange, false);
-        document.addEventListener("webkitvisibilitychange", visibilitychange, false);
+	
 	//}
 	//window.location.assign("linktomyasus://");
 	//window.location.reload(true);
