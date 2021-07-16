@@ -67,12 +67,13 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
 	document.addEventListener("webkitvisibilitychange", visibilitychange, false);
 	*/ 
 	document.addEventListener("visibilitychange", function() {
-  		if (document.visibilityState === document.hidden) {
-			alert('1');
-    			clearTimeout(timer);
-  		} else {
-			alert('2');
-  		}
+  		//if (document.visibilityState === document.hidden) {
+		//	alert('1');
+    		//	clearTimeout(timer);
+  		//} else {
+		//	alert('2');
+  		//}
+		alert(document.visibilityState);
 	});
 	//}
 	//window.location.assign("linktomyasus://");
