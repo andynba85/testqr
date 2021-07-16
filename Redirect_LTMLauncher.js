@@ -27,8 +27,8 @@ function navigateLTM(androidStoreId,appStoreId,recid) {
     
     if (platform === "ios") {
         
-	const myurl = new URL("linktomyasus://");
-	fecth(myurl).then(function(response){
+	//const myurl = new URL("linktomyasus://");
+	fecth("linktomyasus://").then(function(response){
 		alert(response);
 		return respoonse.text;
 	}).then(function(text){
